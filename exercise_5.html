@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 5</title>
+    <script>
+        // Exercitiul 5
+        // Se introduc de la tastatura numele a 3 persoane si salariul lor lunar.
+        // Sa se afiseze salariul anual mediu al celor trei persoane si persoana cu salariul cel mai apropiat de medie.
+
+        function calculateAverageSalary(person1, person2, person3) {
+            var averageSalaryFormula = (person1 + person2 + person3) / 3;
+            return averageSalaryFormula;
+        }
+
+        function checkIfclosestToAverage(x, y, z) {
+            if (x != y != z) {
+                x1 = Math.abs(x - averageSalary);
+                y1 = Math.abs(y - averageSalary);
+                z1 = Math.abs(z - averageSalary);
+
+                if (x1 < y1 && x1 < z1) {
+                    alert(`${firstPersonName} has the closest salary to their average which is ${transformFirstPersonSalary} RON`);
+                    return x;
+                }
+                if (y1 < x1 && y1 < z1) {
+                    alert(`${secondPersonName} has the closest salary to their average which is ${transformSecondPersonSalary} RON`);
+                    return y;
+                }
+                if (z1 < x1 && z1 < y1) {
+                    alert(`${thirdPersonName} has the closest salary to their average which is ${transformThirdPersonSalary} RON`);
+                    return z;
+                }
+                return 0;
+            }
+            else
+                return false;
+        }
+
+
+        var firstPersonName = prompt("Please enter your name:");
+        var firstPersonSalary = prompt("Please insery your net salary:");
+        var transformFirstPersonSalary = parseInt(firstPersonSalary);
+
+        var secondPersonName = prompt("Please enter your name:");
+        var secondPersonSalary = prompt("Please insery your net salary:");
+        var transformSecondPersonSalary = parseInt(secondPersonSalary);
+
+        var thirdPersonName = prompt("Please enter your name:");
+        var thirdPersonSalary = prompt("Please insery your net salary:");
+        var transformThirdPersonSalary = parseInt(thirdPersonSalary);
+
+        var averageSalary = calculateAverageSalary(transformFirstPersonSalary, transformSecondPersonSalary, transformThirdPersonSalary);
+        alert(`The average salary is ${averageSalary} RON`);
+        var closeToAverage = checkIfclosestToAverage(transformFirstPersonSalary, transformSecondPersonSalary, transformThirdPersonSalary);
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

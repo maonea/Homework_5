@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 3</title>
+    <script>
+        // Exercitiul 3
+        // Sa introduce de la tastatura o suma ce reprezinta o suma exprimata in EURO.
+        // Sa se afiseze valoare in RON si USD a sumei introduse.
+
+        function calculateEurToRon(euro) {
+            var ron = euro * 4.87
+            return ron;
+        }
+
+        function calculateEurToUsd(euro) {
+            var usd = euro * 1.18;
+            return usd;
+        }
+
+        var userInput = prompt('Please type in how much Euro you want to exchange in RON or USD:')
+        var transformAnswer = parseInt(userInput);
+
+        var eurToRon = calculateEurToRon(transformAnswer);
+        var eurToUsd = calculateEurToUsd(transformAnswer);
+
+        alert(`You want to convert ${transformAnswer} EUR at a conversion rate of 1 EUR = 4.87 RON and 1 EUR = 1.18 USD and the result is:
+${eurToRon} RON 
+${eurToUsd} USD.`);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
