@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 6</title>
+    <script>
+        // Exercitiul 6
+        // Se introduce de la tastarura un an.Sa se afiseze daca in acel an s-a jucat Campionatul Mondial de Fotbal.
+
+        function calculateWordlChampionship (year) {
+            var championship = year - 1930;
+            if (championship % 4 === 0) {
+                alert ("The World Championship of football was played that year")
+            } else {
+                alert("There was no World Championship of footbal that year");
+            }
+        }
+        var userInput = prompt("Please enter a year");
+        var userAnswerTransform = parseInt(userInput);
+        calculateWordlChampionship(userAnswerTransform);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

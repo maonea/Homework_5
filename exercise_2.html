@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 2</title>
+    <script>
+        // Exercitiul 2
+        // Distanta de la Bucuresti la Cluj este de 281.5 mile.In cat timp ar ajunge un calator care conduce continuu cu o viteza medie de 70 Km / h ?
+        // Dar de la Cluj la Iasi, orase intre care distanta este de 243.5 mile ?
+        // Dar daca ar merge cu o viteza medie de 50 Km / h ?
+
+        function transformKmToMiles(speed) {
+            var miles = speed / 1.609;
+            return miles;
+        }
+        var firstAverageSpeed = transformKmToMiles(70).toFixed(2);
+        var secondAverageSpeed = transformKmToMiles(50).toFixed(2);
+        // alert(`First average speed in Km is 70 and transformed to miles is ${firstAverageSpeed}`);
+        // alert(`Second average speed in Km is 70 and transformed to miles is ${secondAverageSpeed}`);
+
+        function calculateTripTime(distance, averageSpeed) {
+            var time = distance / averageSpeed;
+            return time;
+        }
+
+        var firstRoute = 281.5;  // Bucharest to Cluj 
+        var secondRoute = 243.5; // Cluj to Iasi
+
+
+        // With 70 km / h 
+        var bucToClujTripTime = calculateTripTime(firstRoute, firstAverageSpeed).toFixed(2);
+        var clujToIasiTripTime = calculateTripTime(secondRoute, firstAverageSpeed).toFixed(2);
+
+        alert(`The time spent on the route from Bucharest to Cluj (${firstRoute} miles) with an average speed of ${firstAverageSpeed} miles/h, will be ${bucToClujTripTime} hours. 
+And from Cluj to Iasi (${secondRoute} miles) you'll spend on the road about ${clujToIasiTripTime} hours`);
+
+        // With 50 km / h
+
+        var bucToClujTripTime2 = calculateTripTime(firstRoute, secondAverageSpeed).toFixed(2);
+        var clujToIasiTripTime2 = calculateTripTime(secondRoute, secondAverageSpeed).toFixed(2);
+
+        alert(`The time spent on the route from Bucharest to Cluj (${firstRoute} miles) with an average speed of ${secondAverageSpeed} miles/h, will be ${bucToClujTripTime2} hours. 
+And from Cluj to Iasi (${secondRoute} miles) you'll spend on the road about ${clujToIasiTripTime2} hours`);
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

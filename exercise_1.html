@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1</title>
+    <script>
+        // Exercitiul 1
+        // Se da dimensiunea a 4 fisiere exprimata in Gigabytes.
+        // Sa se transforme dimensiunile in Kilobytes si sa se calculeze care este dimensiunea totala a fisierelor in Kilobytes.
+
+        function transformMemory(gigaByte, firstFile, secondFile, thirdFile, fourthFile) {
+
+            var transformGbToKb = gigaByte * Math.pow(10, 6);
+
+            return transformGbToKb;
+        }
+
+        function calculateSum (firstFile, secondFile, thirdFile, fourthFile) {
+            var calculateTotalFileSize = firstFile + secondFile + thirdFile + fourthFile;
+            return calculateTotalFileSize;
+        }
+
+
+        var ssd = 256;
+        var ssdKb = transformMemory(ssd);
+
+        var hdd = 128;
+        var hddKb = transformMemory(hdd);
+
+        var externalSsd = 512;
+        var externalSsdKb = transformMemory(externalSsd);
+
+        var externalHdd = 768;
+        var externalHddKb = transformMemory(externalHdd);
+
+        var fileSizeSum = calculateSum(ssdKb, hddKb, externalSsdKb, externalHddKb);
+
+        alert(ssdKb);
+        alert(hddKb);
+        alert(externalSsdKb);
+        alert(externalHddKb);
+        alert("Suma totala a fisierelor este de : " + fileSizeSum + " Kb");
+        
+    
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
